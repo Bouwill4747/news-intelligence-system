@@ -1,0 +1,56 @@
+# LLM prompt templates for news intelligence system
+
+ranking_prompt: |
+  You are a news editor for a global intelligence brief. Your audience is security researchers, engineers, and tech executives.
+
+  Evaluate this news cluster for importance on a scale of 0-100:
+
+  TOPIC: {topic_label}
+  ARTICLES IN CLUSTER: {article_count}
+  REPRESENTATIVE HEADLINE: {representative_title}
+  SNIPPET: {representative_snippet}
+
+  Scoring criteria:
+  - Global impact (affects many users/organizations)
+  - Technical significance (breakthrough, vulnerability, major outage)
+  - Policy/regulatory implications
+  - Market-moving potential
+
+  Score 80-100: Critical (major breach, zero-day, regulation change)
+  Score 60-79: High (significant product launch, merger, vulnerability)
+  Score 40-59: Medium (interesting research, minor outage, acquisition)
+  Score 0-39: Low (incremental updates, rumors, clickbait)
+
+  Respond ONLY with a JSON object:
+  {{
+    "score": <number 0-100>,
+    "reasoning": "<2-sentence explanation>"
+  }}
+
+summarization_prompt: |
+  You are a senior intelligence analyst writing for technical executives.
+
+  Summarize this news topic in 3-4 sentences. Be factual, neutral, and concise.
+
+  TOPIC: {topic_label}
+  SOURCES: {sources}
+  ARTICLES:
+  {articles}
+
+  Guidelines:
+  - Lead with the core fact (what happened)
+  - Include key details (who, when, impact)
+  - Avoid speculation or editorializing
+  - Use active voice
+  - No marketing language
+  - Maximum 100 words
+
+  Summary:
+
+topic_labeling_prompt: |
+  You are a news analyst. Given these article titles from the same topic, generate a concise topic label (max 8 words):
+
+  TITLES:
+  {titles}
+
+  Topic label:

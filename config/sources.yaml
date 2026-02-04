@@ -1,0 +1,85 @@
+# High-quality news sources for intelligence digest
+# Organized by category with reliability scores
+
+cybersecurity:
+  tier_1:
+    - name: "Krebs on Security"
+      url: "https://krebsonsecurity.com/feed/"
+      reliability: 0.95
+      
+    - name: "BleepingComputer"
+      url: "https://www.bleepingcomputer.com/feed/"
+      reliability: 0.90
+      
+    - name: "The Hacker News"
+      url: "https://feeds.feedburner.com/TheHackersNews"
+      reliability: 0.85
+
+  tier_2:
+    - name: "Dark Reading"
+      url: "https://www.darkreading.com/rss.xml"
+      reliability: 0.80
+      
+    - name: "SecurityWeek"
+      url: "https://www.securityweek.com/feed/"
+      reliability: 0.75
+
+  official:
+    - name: "CISA Alerts"
+      url: "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+      reliability: 1.0
+
+technology:
+  tier_1:
+    - name: "Ars Technica"
+      url: "https://feeds.arstechnica.com/arstechnica/index"
+      reliability: 0.95
+      
+    - name: "The Verge"
+      url: "https://www.theverge.com/rss/index.xml"
+      reliability: 0.85
+      
+    - name: "TechCrunch"
+      url: "https://techcrunch.com/feed/"
+      reliability: 0.80
+
+  tier_2:
+    - name: "Wired"
+      url: "https://www.wired.com/feed/rss"
+      reliability: 0.85
+      
+    - name: "MIT Technology Review"
+      url: "https://www.technologyreview.com/feed/"
+      reliability: 0.90
+      
+    - name: "VentureBeat"
+      url: "https://venturebeat.com/feed/"
+      reliability: 0.75
+
+  specialized:
+    - name: "Hacker News"
+      url: "https://hnrss.org/frontpage"
+      reliability: 0.70
+
+crypto:
+  tier_1:
+    - name: "CoinDesk"
+      url: "https://www.coindesk.com/arc/outboundfeeds/rss/"
+      reliability: 0.85
+      
+    - name: "The Block"
+      url: "https://www.theblock.co/rss.xml"
+      reliability: 0.85
+      
+    - name: "Decrypt"
+      url: "https://decrypt.co/feed"
+      reliability: 0.80
+
+  tier_2:
+    - name: "Cointelegraph"
+      url: "https://cointelegraph.com/rss"
+      reliability: 0.70
+      
+    - name: "Bitcoin Magazine"
+      url: "https://bitcoinmagazine.com/.rss/full/"
+      reliability: 0.75

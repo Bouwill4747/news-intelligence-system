@@ -1,0 +1,56 @@
+# News Intelligence System Settings
+
+# Ollama configuration
+ollama:
+  host: "http://ollama:11434"
+  embedding_model: "nomic-embed-text"  # We'll use sentence-transformers instead
+  ranking_model: "llama3.2:3b-instruct-q4_K_M"
+  summarization_model: "llama3.1:8b-instruct-q4_K_M"
+  timeout: 120  # seconds
+
+# Clustering configuration
+clustering:
+  similarity_threshold: 0.75  # Cosine similarity for same cluster
+  min_cluster_size: 2  # Minimum articles per cluster
+  embedding_model: "all-MiniLM-L6-v2"  # Sentence-transformers model
+
+# Ranking configuration
+ranking:
+  top_n_clusters: 15  # Maximum stories in digest
+  min_importance_score: 65  # Minimum score to include
+  source_tier_weights:
+    tier_1: 1.0
+    tier_2: 0.8
+    official: 1.2
+  recency_decay_hours: 24  # How fast old stories lose importance
+  cluster_size_weight: 0.2  # Weight for cluster size in ranking
+
+# Database
+database:
+  path: "/app/data/news.db"
+  
+# Telegram
+telegram:
+  enabled: true
+  bot_token: "${TELEGRAM_BOT_TOKEN}"  # Set via environment variable
+  chat_id: "${TELEGRAM_CHAT_ID}"
+
+# Email
+email:
+  enabled: true
+  smtp_host: "${SMTP_HOST}"
+  smtp_port: 587
+  smtp_user: "${SMTP_USER}"
+  smtp_password: "${SMTP_PASSWORD}"
+  from_address: "${EMAIL_FROM}"
+  to_address: "${EMAIL_TO}"
+
+# Scheduling
+schedule:
+  timezone: "America/Toronto"
+  digest_time: "00:00"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "json"

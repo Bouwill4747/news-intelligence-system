@@ -1,0 +1,20 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets
+.env
+
+# Data and outputs
+data/
+logs/
+*.db
+*.db-journal
+
+# System files
+.DS_Store
+*.swp
+*.swo
+*~
