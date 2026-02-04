@@ -1,14 +1,14 @@
-# 🌐 News Intelligence System
+# News Intelligence System
 
-AI-powered daily digest pipeline that aggregates, clusters, and summarizes global news from 18+ RSS feeds across Cybersecurity, Technology, and Cryptocurrency — entirely on local hardware with zero cloud dependency.
+AI-powered daily digest pipeline that aggregates, clusters, and summarizes global news from 18+ RSS feeds across Cybersecurity, Technology, and Cryptocurrency, entirely on local hardware with zero cloud dependency.
 
 ## Features
 
-- **Semantic deduplication** — Groups similar stories using sentence embeddings (not keyword matching)
-- **LLM-powered ranking** — Scores importance using Llama 3.2 3B with multi-signal composite scoring
-- **Smart summarization** — Generates concise 3-4 sentence summaries with Llama 3.1 8B
-- **Automated delivery** — Sends daily digest to Telegram and email at midnight
-- **Fully local** — No API costs, no cloud services, runs on a single RTX 3090
+- **Semantic deduplication** : Groups similar stories using sentence embeddings (not keyword matching)
+- **LLM-powered ranking** : Scores importance using Llama 3.2 3B with multi-signal composite scoring
+- **Smart summarization** : Generates concise 3-4 sentence summaries with Llama 3.1 8B
+- **Automated delivery** : Sends daily digest to Telegram and email at midnight
+- **Fully local** : No API costs, no cloud services, runs on a single RTX 3090
 
 ## Tech Stack
 
